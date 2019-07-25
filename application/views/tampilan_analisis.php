@@ -292,21 +292,26 @@
                               <?php } ?>
                             </tbody>
                           </table>
+                          <p>Catatan</p>
+                          <ul>
+                            <li>Tabel Penunjukkan hasil prediksi untuk bulan <?=$this->leastsquare->bulan($prediksiKe)?> <?=@$tahun[0]->tahun+$this->leastsquare->tahun($prediksiKe)?></li>
+                            <li>Grafik Menunjukkan <?=$this->leastsquare->kenaikan($Y[count($Y)-1], $Ytopi[$prediksiKe-1])?> penjualan dari bulan sebelumnya</li>
+                          </ul>
                         </div>
                         <div class="col-sm-6">
-                        <h4 style="text-align: center;">Grafik Prediksi</h4>
-                        <div class="chart">
-                          <canvas id="lineChart" style="height:350px"></canvas>
-                        </div>
-                        
-                        <div class="col-md-12">
-                            <div class="col-md-1" style="background-color: #A52A2A; width: 15px; height: 15px;"></div>
-                            <div class="col-md-6" style="padding-left: 10px"> Kurva data prediksi</div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="col-md-1" style="background-color: #0000FF; width: 15px; height: 15px;"></div>
-                            <div class="col-md-6" style="padding-left: 10px"> Kurva data real</div>
-                        </div>
+                          <h4 style="text-align: center;">Grafik Prediksi</h4>
+                          <div class="chart">
+                            <canvas id="lineChart" style="height:350px"></canvas>
+                          </div>
+                          
+                          <div class="col-md-12">
+                              <div class="col-md-1" style="background-color: #A52A2A; width: 15px; height: 15px;"></div>
+                              <div class="col-md-6" style="padding-left: 10px"> Kurva data prediksi</div>
+                          </div>
+                          <div class="col-md-12">
+                              <div class="col-md-1" style="background-color: #0000FF; width: 15px; height: 15px;"></div>
+                              <div class="col-md-6" style="padding-left: 10px"> Kurva data real</div>
+                          </div>
 
                         </div>
                       </div>
@@ -331,7 +336,7 @@
         for(let i = 1; i <= jum; i++){
           periode2[i-1] = i;
         }
-        console.log(periode2);
+        // console.log(periode2);
         //  periode2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ];
          data12 = <?=json_encode($Ytopi)?>;
          data22 = <?=json_encode($Y)?>;

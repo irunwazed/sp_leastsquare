@@ -39,4 +39,42 @@ class LeastSquare {
         
     }
 
+    public function bulan($index){
+        $bulan = array(
+            "Desember",
+            "Januari",
+            "Februari",
+            "Maret",
+            "April",
+            "Mei",
+            "Juni",
+            "Juli",
+            "Agustus",
+            "September",
+            "Oktober",
+            "November",
+        );
+
+        return $bulan[$index%12];
+    }
+
+    public function tahun($index){
+        
+
+        return round($index/12);
+    }
+
+    public function kenaikan($lama, $baru){
+
+        if($lama > $baru){
+            $status = "penurunan";
+        }else if($lama < $baru){
+            $status = "penaikan";
+        }else{
+            $status = "tidak berubah";
+        }
+        return $status;
+    }
+
+
 }
